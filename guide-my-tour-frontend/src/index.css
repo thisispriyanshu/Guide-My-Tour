@@ -5,9 +5,119 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1{
+  color: skyblue;
+  background: transparent;
+  text-shadow: 0 2px 2px black;
+} 
+
+.cards{
+  width: 100%;
+  height: auto;
+}
+
+.card{
+  margin: 6%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 0.1);
+  background-color: #fff;
+  width: 20%;
+  border-radius: 12px;
+  box-shadow: 13px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  float: left;
+} 
+
+.card:hover{
+  box-shadow: 10px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05, 1.05);
+}
+
+.card__img{
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card__info{
+  background-color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 16px 24px 24px 24px;
+}
+
+.card__category{
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #868686;
+  background-color: #fff;
+}
+
+.card__title{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+  background-color: #fff;
+  text-transform: capitalize;
+}
+
+.box{
+  background-color:#efefef;
+  /* border-radius: 5%; */
+  padding: 20px;
+  box-shadow: #868686;
+}
+
+.center1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resize{
+  width: 200px;
+  height: 30px;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.button1{
+  padding: 5px 8px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #868686;
+  background-color:darkslateblue;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.button{
+  padding: 5px 8px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #868686;
+  background-color:#fff;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
