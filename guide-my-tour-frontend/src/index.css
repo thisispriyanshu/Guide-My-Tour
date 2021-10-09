@@ -27,9 +27,26 @@ code {
   
 }
 
-.navbar-button{
+.navbar-button-1{
   position: absolute;
-  right: 19px;
+  right: 200px;
+  width: 150px;
+  cursor: pointer;
+}
+.navbar-button-2{
+  position: absolute;
+  right: 80px;
+  width: 150px;
+  cursor: pointer;
+}
+.navbar-button-text{
+
+}
+
+.navbar-button-login{
+  position: absolute;
+  right: 0px;
+  top: 15px;
 }
 
 .card{
@@ -96,3 +113,4 @@ code {
   border: 1px solid black;
   cursor: pointer;
 }
+
