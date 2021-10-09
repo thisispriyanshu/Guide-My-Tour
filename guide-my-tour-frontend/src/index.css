@@ -27,17 +27,34 @@ code {
   
 }
 
-.navbar-button{
+.navbar-button-1{
   position: absolute;
-  right: 19px;
+  right: 200px;
+  width: 150px;
+  cursor: pointer;
+}
+.navbar-button-2{
+  position: absolute;
+  right: 80px;
+  width: 150px;
+  cursor: pointer;
+}
+.navbar-button-text{
+
 }
 
-.cards{
+.navbar-button-login{
+  position: absolute;
+  right: 0px;
+  top: 15px;
+}
+
+.card{
   width: 100%;
   height: auto;
 }
 
-.card{
+.card-item{
   margin: 6%;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 0.1);
   background-color: #fff;
@@ -47,7 +64,7 @@ code {
   float: left;
 } 
 
-.card:hover{
+.card-item:hover{
   box-shadow: 10px 30px 18px -8px rgba(0, 0, 0, 0.1);
   transform: scale(1.05, 1.05);
 }
@@ -95,4 +112,61 @@ code {
   outline: none;
   border: 1px solid black;
   cursor: pointer;
+}
+
+.button{
+  padding: 5px 8px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #868686;
+  background-color:#fff;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+input[type="text"]:focus:hover {
+  outline: none;
+}
+input[type="email"]:focus {
+  outline: none;
+}
+input[type="email"]:focus:hover {
+  outline: none;
+}
+
+input[type="password"]:focus {
+  outline: none;
+}
+input[type="password"]:focus:hover {
+  outline: none;
+}
+
+.box{
+  background-color:#efefef;
+  /* border-radius: 5%; */
+  padding: 20px;
+  box-shadow: #868686;
+}
+
+.center1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resize{
+  width: 200px;
+  height: 30px;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 1;
 }
