@@ -170,3 +170,36 @@ input::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 1;
 }
+.Timeline{
+  display: flex;
+  flex-direction:column;
+  margin: 40px 0;
+}
+.Timeline::after{
+  background-color: #e17b77;
+  content:'';
+  position: absolute;
+  left: calc(50%-2px);
+  width: 4px;
+  height: 100%;
+}
+.Timelinelist-Item{
+  background-color: rgb(112, 76, 112);
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+  margin: 10px;
+  width: 50%;
+}
+.Timelinelist-Item:nth-child(odd){
+  align-self: flex-end;
+  justify-content: flex-start;
+  padding-right: 0px;
+  padding-left: 30px;
+
+}
+.Timelinelist-Item-Content{
+  background-color:chocolate;
+  max-width: 70px;
+  
+}
