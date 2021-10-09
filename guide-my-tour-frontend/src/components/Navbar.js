@@ -4,6 +4,7 @@ import Icon from '@mui/material/Icon';
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import LocationDisabledIcon from '@mui/icons-material/LocationDisabled';
 import AddBoxIcon from '@mui/icons-material/AddBox';
+import SignUp from './SignUp';
 
 function Navbar(props) {
     return (
@@ -22,7 +23,7 @@ function Navbar(props) {
                 <AddBoxIcon/>
             <span href="" className="navbar-button-text">Post</span>
             </div>
-            <button className="navbar-button-login">LogIn</button>
+            <button href={SignUp}className="navbar-button-login">LogIn</button>
         </div>
         </div>
         </div>
