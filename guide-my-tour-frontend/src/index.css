@@ -170,11 +170,13 @@ input::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 1;
 }
+
 .Timeline{
   display: flex;
   flex-direction:column;
   margin: 40px 0;
 }
+
 .Timeline::after{
   background-color: #e17b77;
   content:'';
@@ -183,6 +185,7 @@ input::-webkit-input-placeholder {
   width: 4px;
   height: 100%;
 }
+
 .Timelinelist-Item{
   background-color: rgb(112, 76, 112);
   display: flex;
@@ -191,6 +194,7 @@ input::-webkit-input-placeholder {
   margin: 10px;
   width: 50%;
 }
+
 .Timelinelist-Item:nth-child(odd){
   align-self: flex-end;
   justify-content: flex-start;
@@ -198,6 +202,7 @@ input::-webkit-input-placeholder {
   padding-left: 30px;
 
 }
+
 .Timelinelist-Item-Content{
   background-color:chocolate;
   max-width: 70px;

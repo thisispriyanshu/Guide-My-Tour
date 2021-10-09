@@ -6,7 +6,7 @@ import LocationDisabledIcon from '@mui/icons-material/LocationDisabled';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import SignUp from './SignUp';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import Post from './Post';
 
 function Navbar(props) {
     return (
@@ -23,10 +23,15 @@ function Navbar(props) {
             <span href="" className="navbar-button-text">Track my device</span>
             </div>
             <div className="navbar-center">
+                <Link to="/Post">
                 <div className="navbar-button-2">
                 <AddBoxIcon/>
             <span href="" className="navbar-button-text">Post</span>
             </div>
+            </Link>
+            <Route exact path="/Post">
+                <Post/>
+                </Route>
             {/* <button href={SignUp}className="navbar-button-login">LogIn</button> */}
             <div>
                  <Link to="/SignUp">Log In</Link>

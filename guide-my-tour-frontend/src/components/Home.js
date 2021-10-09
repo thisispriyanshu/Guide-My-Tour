@@ -28,7 +28,7 @@ class Home extends React.Component {
             const {cards}=this.state
     return (
         <div>
-      {/* <Card cards={cards}/> */}
+      <Card cards={cards}/>
       <h1>hello world</h1>
         </div>
     );
