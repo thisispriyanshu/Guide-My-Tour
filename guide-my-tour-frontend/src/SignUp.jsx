@@ -28,7 +28,7 @@ const SignUp = () => {
 
     return (
         <>
-        <h1 style={{textAlign:"center", marginTop:"10%"}}> Guide My Tour </h1>
+        <h1 style={{textAlign:"center"}}> Guide My Tour </h1>
         <div className="box center1">
             <div style={{textAlign:"center", fontSize:"20px"}}>
                 <form action="" onSubmit={handleSubmit}>
@@ -42,7 +42,7 @@ const SignUp = () => {
                     </div>
                     <div >
                         {/* <label htmlFor="email" style={{marginBottom:"5px"}}> Email Id </label> */}
-                        <input type="text" autoComplete="off"
+                        <input type="email" autoComplete="off"
                         value={signUp.email}
                         onChange={handleChange }
                         name="email" id="email"  placeholder="Email" className="resize"/>
@@ -54,9 +54,8 @@ const SignUp = () => {
                         onChange={handleChange }
                         name="password" id="password" placeholder="Password" className="resize"/>
                     </div>
-                    <button style={{margin:"5px"}} className="button1" type="submit">Submit</button>
-                    Or
-                    <button style={{margin:"5px"}} className="button1" >Sign In</button>
+                    <button style={{margin:"5px"}} className="button1" type="submit">Sign Up</button>
+                    <button style={{margin:"5px", backgroundColor:"orange"}} className="button1" >Sign In</button>
                 </form>
             </div>
         </div>

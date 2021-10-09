@@ -91,7 +91,7 @@ h1{
 }
 
 input::-webkit-input-placeholder {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
 }
 
@@ -101,7 +101,7 @@ input::-webkit-input-placeholder {
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 2px;
-  color: #868686;
+  color: white;
   background-color:darkslateblue;
   outline: none;
   border: 1px solid black;
@@ -121,3 +121,15 @@ input::-webkit-input-placeholder {
   cursor: pointer;
 }
 
+input[type="text"]:focus {
+  outline: none;
+}
+input[type="text"]:focus:hover {
+  outline: none;
+}
+input[type="email"]:focus {
+  outline: none;
+}
+input[type="email"]:focus:hover {
+  outline: none;
+}
