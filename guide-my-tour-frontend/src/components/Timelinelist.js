@@ -28,10 +28,10 @@ class Timelinelist extends React.Component{
             </span>     
             {/* <span>{influencerName}</span> */}
             <span>{location}</span>
-            <time>time</time>
+            {/* <time>time</time> */}
             <p>{description}</p>
                   <Link to="/Post">
-             <Button>Upload photo</Button>
+             <Button>Upload data</Button>
              </Link>
              <Route exact path="/Post">
                  <Post/>

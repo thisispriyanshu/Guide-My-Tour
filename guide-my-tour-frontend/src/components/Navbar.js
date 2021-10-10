@@ -80,11 +80,11 @@ const Navbar = (props) => {
         return (
             <div style={{display: "flex", justifyContent: "space-between", margin: "10px"}}>
                 <div style={{display: "flex"}}>
-                    <img src="" className="logo-img"/>
+                    <img src=".../public/icons8-tour-guide-64.png" className="logo-img"/>
 
                     <div style={{marginLeft: "10px", cursor: "pointer"}}>
                         <Link to="/SignUp">
-                            <button onClick={handleLogin}> Log In </button>   
+                            {/* <button onClick={handleLogin}> Log In </button>    */}
                         </Link>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ const Navbar = (props) => {
 
 
 
-    // return (
+    
     //     <Router>
     //         <div className="navbar">
     //             <img src="" className="logo-img"/>

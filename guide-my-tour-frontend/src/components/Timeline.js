@@ -8,10 +8,10 @@ import "../index.css";
     return(
     <div className="Timeline">
     
-    return <Timelinelist 
+    <Timelinelist 
     data={datas}/>
   
-    <button>submit</button>
+    {/* <button>submit</button> */}
    </div>
     )
     }

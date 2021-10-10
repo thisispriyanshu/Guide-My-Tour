@@ -87,7 +87,7 @@ onChangeImageUrl(e) {
                         <input type="link" value={this.state.imgUrl} onChange={this.onChangeImageUrl} className="form-control" />
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Create User" className="btn btn-success btn-block" />
+                        <input type="submit" value="Submit" className="btn btn-success btn-block" />
                     </div>
                 </form>
             </div>
