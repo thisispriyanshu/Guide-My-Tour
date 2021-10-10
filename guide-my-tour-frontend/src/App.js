@@ -30,20 +30,29 @@ class App extends React.Component {
         location : "Maharastra,India",
         description : "This", 
       }
-]
+    ]
     }
   }
   render(){
     const {cards}=this.state
-  return (
-    <div className="App">
-      {/* <Track/> */}
-      {/* <SignUp/> */}
-      <Navbar datas={cards}/>
-      <Card cards={cards}/>
-    </div>
-  );
-}
+    return (
+      <Router>
+        <switch>
+          <Route exact path="/">
+            <div className="App">
+              <SignUp/>
+            </div>
+          </Route>
+
+          <Route path="/home">
+            <div className= "App">
+              <Navbar datas={cards} />
+            </div>
+          </Route>
+        </switch>
+      </Router>
+    );
+  }
 }
 
 export default App;
