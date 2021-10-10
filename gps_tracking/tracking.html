@@ -8,12 +8,13 @@
 </head>
 <body>
     <button id="start">Start</button>
-    <button id="stop">Stop</button>
-    <!-- <button id="trackme" src="/index.html">Track Me</button> -->
+    <button id="stop" >Stop</button>
+    <button id="trackme" onclick= "window.location.href = '/gps_tracking/index.html'; ">Track Me</button>
 
     <script>
         const start = document.querySelector("#start");
         const stop = document.querySelector("#stop");
+        
 
         const coordinates = [];
 
@@ -21,7 +22,7 @@
             navigator.geolocation.watchPosition(
                 data => {
                     console.log(data);
-                    coordinates.push([data.coords.latitude, data.coords.longitude]);
+                    // coordinates.push([data.coords.latitude, data.coords.longitude]);
                     window.localStorage.setItem("coordinates", JSON.stringify(coordinates));
                 },
                 error => console.log(error),
