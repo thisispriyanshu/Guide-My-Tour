@@ -64,7 +64,7 @@ const SignUp = () => {
                     </Link>
                    </div>
                    <Switch>
-                       <Route exact path="/Home">
+                       <Route path="/Home">
                            <Home/>
                            </Route>
                            </Switch>

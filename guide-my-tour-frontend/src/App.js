@@ -23,12 +23,12 @@ class App extends React.Component {
           description : "This",
       },
       {
-       id:2,
-       placeName : "Mumbai",
-       imgUrl : "https://www.telegraph.co.uk/content/dam/Travel/Destinations/Asia/India/Mumbai/gateway-of-india-mumbai-xlarge.jpg?imwidth=1200",
-       influencerName : "Ekanshi",
-       location : "Maharastra,India",
-       description : "This", 
+        id:2,
+        placeName : "Mumbai",
+        imgUrl : "https://www.telegraph.co.uk/content/dam/Travel/Destinations/Asia/India/Mumbai/gateway-of-india-mumbai-xlarge.jpg?imwidth=1200",
+        influencerName : "Ekanshi",
+        location : "Maharastra,India",
+        description : "This", 
       }
 ]
     }
