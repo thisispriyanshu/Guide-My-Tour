@@ -229,3 +229,7 @@ input::-webkit-input-placeholder {
   padding-left: 30px;
 
 }
+
+.map-container{
+  height: 800px;
+}
