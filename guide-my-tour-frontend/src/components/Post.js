@@ -1,63 +1,96 @@
-import React,{useState } from 'react';
+import React, { Component } from 'react';
 import axios from '../axios';
-import '../index.css';
 
-function Post() {
+export default class Post extends Component {
 
-  const [userInfo, setuserInfo] = useState({
-    file:[],
-    filepreview:null,
-   });
+    constructor(props) {
+        super(props)
 
-  const handleInputChange = (event) => {
-    setuserInfo({
-      ...userInfo,
-      file:event.target.files[0],
-      filepreview:URL.createObjectURL(event.target.files[0]),
-    });
+        this.onChangePlaceName = this.onChangePlaceName.bind(this);
+        this.onChangeInfluencerName = this.onChangeInfluencerName.bind(this);
+        this.onChangeLocation = this.onChangeLocation.bind(this);
+        this.onChangeDescription = this.onChangeDescription.bind(this);
+        this.onChangeImageUrl = this.onChangeImageUrl.bind(this);
+        
+        this.onSubmit = this.onSubmit.bind(this);
 
+        this.state = {
+            placeName: '',
+            influencerName: '',
+            location:'',
+            description:'',
+            imgUrl:''
+        }
+    }
+
+    onChangePlaceName(e) {
+        this.setState({ placeName: e.target.value })
+    }
+
+    onChangeInfluencerName(e) {
+        this.setState({ influencerName: e.target.value })
+    }
+    onChangeLocation(e) {
+      this.setState({ location: e.target.value })
   }
-
-  const [isSucces, setSuccess] = useState(null);
-
-  const submit = async () =>{
-    const formdata = new FormData(); 
-    formdata.append('avatar', userInfo.file);
-
-    axios.post("/trip/", formdata,{   
-            headers: { "Content-Type": "multipart/form-data" } 
-    })
-    .then(res => { // then print response status
-      console.warn(res);
-      if(res.data.success === 1){
-        setSuccess("Image upload successfully");
-      }
-
-    })
-  }
-
-  return (
-    <div className="container mr-60">
-
-      <div className="formdesign">
-      {isSucces !== null ? <h4> {isSucces} </h4> :null }
-        <div className="form-row">
-          <label className="text-white">Select Image :</label>
-          <input type="file" className="form-control" name="upload_file"  onChange={handleInputChange} />
-        </div>
-
-        <div className="form-row">
-          <button type="submit" className="btn btn-dark" onClick={()=>submit()} > Save </button>
-          
-        </div>
-      </div>
-      
-      {userInfo.filepreview !== null ? 
-        <img className="previewimg"  src={userInfo.filepreview} alt="UploadImage" />
-      : null}
-
-    </div>
-  );
+  onChangeDescription(e) {
+    this.setState({ description: e.target.value })
+}
+onChangeImageUrl(e) {
+  this.setState({ imgUrl: e.target.value })
 }
 
-export default Post;
+    onSubmit(e) {
+        e.preventDefault()
+
+        const userObject = {
+            placeName: this.state.placeName,
+            influencerName: this.state.influencerName,
+            location: this.state.location,
+            description: this.state.description,
+            imgUrl: this.state.imgUrl
+        };
+
+        axios.post('/trips', userObject)
+            .then((res) => {
+                console.log(res.data)
+            }).catch((error) => {
+                console.log(error)
+            });
+
+        this.setState({ placeName: '',imgUrl:'', influencerName: '',location: '',description:'' })
+    }
+
+
+    render() {
+        return (
+            <div className="wrapper">
+                <form onSubmit={this.onSubmit}>
+                    <div className="form-group">
+                        <label>Add Place Name</label>
+                        <input type="text" value={this.state.placeName} onChange={this.onChangePlaceName} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label>Add Influencer Name</label>
+                        <input type="text" value={this.state.influencerName} onChange={this.onChangeInfluencerName} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label>Add Location</label>
+                        <input type="text" value={this.state.location} onChange={this.onChangeLocation} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label>Add Description</label>
+                        <input type="text" value={this.state.description} onChange={this.onChangeDescription} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label>Add Image Url</label>
+                        <input type="link" value={this.state.imgUrl} onChange={this.onChangeImageUrl} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <input type="submit" value="Create User" className="btn btn-success btn-block" />
+                    </div>
+                </form>
+            </div>
+        )
+    }
+}

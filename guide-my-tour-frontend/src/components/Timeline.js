@@ -7,10 +7,10 @@ import "../index.css";
     //   console.log(datas)
     return(
     <div className="Timeline">
-    {datas.map((data)=>{
+    
     return <Timelinelist 
-    data={data}/>
-  })}
+    data={datas}/>
+  
     <button>submit</button>
    </div>
     )
