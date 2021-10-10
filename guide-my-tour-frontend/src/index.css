@@ -171,6 +171,10 @@ input::-webkit-input-placeholder {
   line-height: 1;
 }
 
+#root{
+  width: 100%;
+}
+
 .Timeline{
   display: flex;
   flex-direction:column;
@@ -186,25 +190,42 @@ input::-webkit-input-placeholder {
   height: 100%;
 }
 
-.Timelinelist-Item{
-  background-color: rgb(112, 76, 112);
+.Timelinelist-Item{  
   display: flex;
-  justify-content: flex-end;
-  padding-right: 30px;
+  /* justify-content: flex-end; */
+  padding-right: 20px;
   margin: 10px;
   width: 50%;
 }
 
 .Timelinelist-Item:nth-child(odd){
-  align-self: flex-end;
+  /* align-self: flex-end; */
   justify-content: flex-start;
   padding-right: 0px;
-  padding-left: 30px;
+  padding-left: 20px;
 
 }
 
 .Timelinelist-Item-Content{
-  background-color:chocolate;
-  max-width: 70px;
-  
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  align-items: flex-end;
+  padding: 15px;
+  width: 400px;  
+  max-width: 85%;
+  text-align: right;
+
+}
+.Timelinelist-Item:hover{
+  box-shadow: 10px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05, 1.05);
+}
+.Timelinelist-Item:nth-child(odd) .Timelinelist-Item-Content{
+  align-self: flex-start;
+  text-align: right;
+  padding-left: 30px;
+
 }

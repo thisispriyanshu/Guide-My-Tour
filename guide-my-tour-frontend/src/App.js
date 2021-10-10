@@ -36,9 +36,8 @@ class App extends React.Component {
   return (
     <div className="App">
       {/* <SignUp/> */}
-      <Navbar/>
+      <Navbar datas={cards}/>
       <Card cards={cards}/>
-      <Timeline datas={cards}/>
     </div>
   );
 }
