@@ -7,10 +7,13 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const routes = require('./routes/trip');
 const https = require("https");
-
 const app = express();
+const Cors= require("cors");
+
 
 app.use(express.json());
+app.use(Cors());
+
 
 app.use('/', routes);
 

@@ -14,7 +14,7 @@ function Navbar(props) {
     return (
         <Router>
         <div className="navbar">
-            <img src="" className="logo-img"/>
+            <img src="/public/icons8-tour-guide-64.png" className="logo-img"/>
             {/* <a href="/" className="navbar-link">Home</a> */}
             {/* <a href="" className="navbar-link">Places</a> */}
             {/* <a href=""className="navbar-link">Influencers</a> */}
