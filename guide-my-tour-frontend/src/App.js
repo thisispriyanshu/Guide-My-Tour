@@ -1,12 +1,13 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Card from './components/Card';
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SignUp from './components/SignUp';
 import Timeline from './components/Timeline';
 // import Track  from './Track';
 import firebase from "firebase";
+import axios from './axios'
 
 
 class App extends React.Component {

@@ -1,5 +1,5 @@
 import React,{useState } from 'react';
-import axios from 'axios';
+import axios from '../axios';
 import '../index.css';
 
 function Post() {
@@ -24,7 +24,7 @@ function Post() {
     const formdata = new FormData(); 
     formdata.append('avatar', userInfo.file);
 
-    axios.post("http://localhost:8080/imageupload", formdata,{   
+    axios.post("/trip/", formdata,{   
             headers: { "Content-Type": "multipart/form-data" } 
     })
     .then(res => { // then print response status
