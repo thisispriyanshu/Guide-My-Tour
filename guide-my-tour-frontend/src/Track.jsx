@@ -85,13 +85,13 @@ const Track = () => {
 //     [-122.493782, 37.833683]
 // ];
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYXl1c2hkb2thbmlhIiwiYSI6ImNrdWpyZm11dTBmdGwyeG1vaGxvczkyeG8ifQ.IMlzM1h4rRYhWh8ESun2Hw';
-    const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-122.486958, 37.82931],
-    zoom: 15
-});
+// mapboxgl.accessToken = 'pk.eyJ1IjoiYXl1c2hkb2thbmlhIiwiYSI6ImNrdWpyZm11dTBmdGwyeG1vaGxvczkyeG8ifQ.IMlzM1h4rRYhWh8ESun2Hw';
+//     const map = new mapboxgl.Map({
+//     container: 'map',
+//     style: 'mapbox://styles/mapbox/streets-v11',
+//     center: [-122.486958, 37.82931],
+//     zoom: 15
+// });
 // map.on('load', () => {
 //     map.addSource('route', {
 //         'type': 'geojson',
